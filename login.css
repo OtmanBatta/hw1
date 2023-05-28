@@ -1,0 +1,125 @@
+body{
+    background-image: url("./Icons/Background.jpg");
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+#OverlayBackground{
+    background-color: rgba(0, 26, 59, 0.644);
+    width: 100%;
+    height: 100%;
+    padding: -10px;
+}
+
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    width: 100%;
+    height: 5vh;
+    border-radius: 1%/50%;
+}
+
+.Header img{
+    width: 10vw;
+    height: 100%;
+    border-radius: 30%;
+    border: 4px ridge rgb(91, 136, 235);
+}
+
+.FormDiv{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+#FormBorder{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1vh ridge white;
+    height: auto;
+    width: auto;
+    padding: 2vh;
+    margin: -2vh;
+}
+
+form{
+    background-color: rgba(115, 175, 253, 0.411);
+    border-radius: 4vh;
+    height: auto;
+    width:40%;
+    padding: 5vw;
+    padding-bottom: 3vw;
+}
+
+form h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: brown;
+    font-size: 3vw;
+}
+
+label input{
+    background-color: rgba(230, 238, 255, 0.651);
+}
+
+.ErrorField{
+    background-color: rgba(255, 0, 0, 0.171);
+}
+
+label{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+h4{
+    padding-top: 2vh;
+}
+
+label span, #TitleForm,h4{
+    color: rgb(182, 212, 238);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#TitleForm{
+    background-color: rgba(255, 255, 255, 0.288);
+    font-size: 4vh;
+    text-align: center;
+    padding: 1vw 1vw 0.7vw 1vw;
+    text-shadow: 1px 1px 1px rgba(51, 113, 247, 0.932);
+    border: 2px groove rgba(47, 135, 250, 0.87);
+}
+
+input{
+    width: 100%;
+    height: 5vh;
+    margin: 1vw 0 1vh 0;
+    border-radius: 50%;
+    font-size: 40px;
+    text-align: center;
+    font-family:'Josefin Sans', sans-serif;
+    color: rgba(115, 175, 253, 0.87);
+    text-shadow: 1px 1px 1px black;
+}
+
+input::placeholder{
+    color: rgba(115, 175, 253, 0.356);
+    text-shadow: none;
+    font-size: 1.5vw;
+}
+
+.LoginBTN{
+    background-color: rgb(114, 159, 255);
+    color: rgb(182, 212, 238);
+    border-color: white;
+    border-style: solid;
+    border-radius: 1%/50%;
+    font-size: 1.5em;
+}
