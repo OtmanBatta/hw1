@@ -1,16 +1,7 @@
-const tbn= document.querySelector("form").querySelector("input");
 const sbt= document.querySelector("#SearchButton");
 const SearchDiv = document.querySelector("#SearchResults");
 
 sbt.addEventListener('click',SearchElements);
-tbn.addEventListener('click',DestroySession);
-
-console.log(tbn);
-
-
-function DestroySession(){
-    fetch("LogOut.php").then(OnR).then(OnT);
-}
 
 function OnR(R){
 return R.text();
@@ -19,7 +10,6 @@ return R.text();
 function OnT(T){
     console.log(T);
 }
-
 
 function SearchElements(){
 
@@ -36,42 +26,40 @@ function onJ(J){
     let count=0;
     SearchDiv.innerHTML="";
     for (const elem of ElemResult) {
-        if(count<10){
         const divElement = document.createElement("div");
         divElement.classList.add("Elements");
+        const divElementinfo = document.createElement("div");
+        divElementinfo.classList.add("ElementsInfo");
         const title = document.createElement("h1");
         const description = document.createElement("h2");
         const image = document.createElement("img");
         const user = document.createElement("h3");
         const date = document.createElement("h3");
-        const id = document.createElement("span");
         const GoToPage = document.createElement("form");
         GoToPage.addEventListener('submit',GoToInfoPage);
 
         title.innerHTML=elem['Titolo'];
         description.innerHTML=elem['Descrizione'];
-        user.innerHTML=elem['Utente'];
-        date.innerHTML=elem['Data'];
-        id.innerHTML=elem['ID'];
+        user.innerHTML="<label>Utente: "+elem['Utente']+"</label>";
+        date.innerHTML="<label>Data: "+elem['Data']+"</label>";
         image.src=elem['UrlImmagine'];
-        GoToPage.innerHTML="<input type=\"hidden\" name=\"IdArticolo\" value=\""+elem['ID']+"\"> <input type=\"submit\" value=\"Go To Page\">";
+        GoToPage.innerHTML="<input type=\"hidden\" name=\"IdArticolo\" value=\""+elem['ID']+"\"> <input type=\"submit\" value=\"Vai all'articolo\">";
         GoToPage.action="SingleItem.php";
         GoToPage.method='POST';
 
-        divElement.appendChild(title);
-        divElement.appendChild(description);
+        divElementinfo.appendChild(title);
+        divElementinfo.appendChild(description);
         divElement.appendChild(image);
-        divElement.appendChild(user);
-        divElement.appendChild(date);
-        GoToPage.appendChild(id);
-        divElement.appendChild(GoToPage);
+        divElementinfo.appendChild(user);
+        divElementinfo.appendChild(date);
+        divElementinfo.appendChild(GoToPage);
+        divElement.appendChild(divElementinfo);
 
         SearchDiv.appendChild(divElement);
         count++;
         }
-    }
     if(count==0){
-        SearchDiv.innerHTML="<h1>Non sono stati trovati risultati</h1>";
+        SearchDiv.innerHTML="<p1>Non sono stati trovati risultati</p1>";
     }
 }
 

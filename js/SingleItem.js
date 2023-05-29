@@ -1,6 +1,6 @@
 const id = document.querySelector("#ID");
 const infodiv = document.querySelector("#ItemInfo");
-const OfferForm = document.querySelector("#Offer");
+const OfferForm = document.querySelector("#FOffer");
 
 OfferForm.addEventListener('submit',FaiOfferta);
 
@@ -25,21 +25,28 @@ function OnJ(J){
         const divElement = document.createElement("div");
         divElement.classList.add("Elements");
         const title = document.createElement("h1");
-        const description = document.createElement("h2");
+        const description = document.createElement("div");
+        description.id="Description";
         const image = document.createElement("img");
         const user = document.createElement("h3");
         const date = document.createElement("h3");
         const UserWinner = document.createElement("h3");
         const Amount = document.createElement("h3");
+        const PostInfo = document.createElement("div");
+        PostInfo.id="PostInfo";
+        const Winner = document.createElement("div");
+        Winner.id="Winner";
+        const WinnerTitle = document.createElement("h2");
 
         title.innerHTML=elem['Titolo'];
-        description.innerHTML=elem['Descrizione'];
-        user.innerHTML=elem['Utente'];
-        date.innerHTML=elem['Data'];
+        description.innerHTML="<h2>"+elem['Descrizione']+"</h2>";
+        user.innerHTML="Utente: "+elem['Utente'];
+        date.innerHTML="Data: "+elem['Data'];
         image.src=elem['UrlImmagine'];
         if(elem['Username']==null){
         UserWinner.innerHTML="Ancora Nessuna Offerta Vincente, Affrettati!!";
         }else{
+        WinnerTitle.innerHTML="Attuale Offerta Vincente:";
         UserWinner.innerHTML=elem['Username'];
         Amount.innerHTML=elem['Offerta']+",00€";
         }
@@ -48,12 +55,17 @@ function OnJ(J){
         divElement.appendChild(title);
         divElement.appendChild(description);
         divElement.appendChild(image);
-        divElement.appendChild(user);
-        divElement.appendChild(date);
-        divElement.appendChild(UserWinner);
+        PostInfo.appendChild(user);
+        PostInfo.appendChild(date);
+        divElement.appendChild(PostInfo);
         if(elem['Username']!=null){
-        divElement.appendChild(Amount);
+        Winner.appendChild(WinnerTitle)
+        Winner.appendChild(UserWinner);
+        Winner.appendChild(Amount);
+        }else{
+        Winner.appendChild(UserWinner);
         }
+        divElement.appendChild(Winner);
         infodiv.appendChild(divElement);
     }
 }
@@ -63,7 +75,7 @@ function FaiOfferta(event){
       const value=OfferForm.querySelector("#Amount").value
       const user=OfferForm.querySelector("#User").value;
 
-      let isnum = /^\d+$/.test(value);
+      let isnum = /^(\d{1, 3}(\, \d{3})*|(\d+))(\.\d{2})?/.test(value);
 
       if(value.length>0){
         if(isnum){
@@ -87,10 +99,10 @@ function onOfferText(T){
 }
 
 function ShowResult(string){
-    let Result = OfferForm.querySelector("h1");
+    let Result = OfferForm.parentElement.querySelector("h1");
     if(Result==null){
      Result = document.createElement("h1");
     }
     Result.innerHTML=string;
-    OfferForm.appendChild(Result);
+    OfferForm.parentElement.appendChild(Result);
 }

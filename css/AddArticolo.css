@@ -1,0 +1,83 @@
+body{
+    background-image: url("./Icons/Background.jpg");
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+.hidden{
+    display: none;
+}
+
+#Header{
+    margin-top: 1vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(30, 158, 212, 0.653);
+    font-family: 'Josefin Sans', sans-serif;
+    color: rgb(182, 212, 238);
+}
+
+#Header a{
+    font-size: 2vh;
+    text-decoration: none;
+    margin-left: 1vh;
+    padding: 2vh;
+    color: rgb(182, 212, 238);
+    background-color: rgba(230, 238, 255, 0.651);
+    border-radius: 3%/40%;
+    font-family: 'Josefin Sans', sans-serif;
+    width: 10%;
+}
+
+form{
+    margin: 4vh;
+    width: 80%;
+    height: 40%;
+    background-color: rgba(115, 175, 253, 0.54);
+    border-radius: 35% 60% 35% 60%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input{
+    margin: 3vh;
+}
+
+#Risultato{
+    color: rgb(216, 250, 255);
+    font-size: 3vh;
+}
+
+
+form label h2{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(216, 250, 255);
+}
+
+#Form{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Header h1{
+    width:30%;
+    text-align: center;
+    margin-left: -7vh;
+    font-size: 4vh;
+}
+
+#Header h2{
+    width:10%;
+}
+
+#Form .Errore{
+    color: red;
+    font-size: 6vh;
+}

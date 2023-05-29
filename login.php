@@ -36,8 +36,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AstaX - Login</title>
-    <script src="login.js" defer></script>
-    <link rel="stylesheet" href="login.css"/>
+    <script src="./js/login.js" defer></script>
+    <link rel="stylesheet" href="./css/login.css"/>
 </head>
 <body>
     <div id="OverlayBackground">

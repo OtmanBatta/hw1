@@ -5,7 +5,7 @@ if(isset($_POST['SearchValue'])){
 
     $Results=array();
 
-    $elements=QueryDB("SELECT * FROM articoli WHERE Titolo LIKE '%".$_POST['SearchValue']."%'");
+    $elements=QueryDB("SELECT * FROM articoli WHERE Titolo LIKE '%".ConvertString($_POST['SearchValue'])."%'");
     while($row=mysqli_fetch_assoc($elements)){
        $Results[]=$row;
     }

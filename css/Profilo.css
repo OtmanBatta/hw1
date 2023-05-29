@@ -1,0 +1,138 @@
+body{
+    background-image: url("./Icons/Background.jpg");
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#UserArticles,#UserOffers{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#UserArticles h4,#UserOffers h4, #InfoUser h4{
+    padding: 1vh;
+    border: 2px solid white;
+    background-color: rgb(129, 213, 255);
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+#Content{
+    margin-top: 2vh;
+    background-color: rgba(240, 255, 255, 0.252);
+    padding: 3vh;
+    width: 80%;
+    display: flex;
+    border-radius: 3%;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#Content h1{
+    color: white;
+    text-align: center;
+    width: 95%;
+    border: 0.5vh solid white;
+    border-radius: 20% 60% 20% 60%;
+    background-color: rgb(155, 215, 255);
+}
+
+#InfoUser{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#InfoUser div{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: rgba(220, 242, 255, 0.825);
+    border-radius: 3%/50%;
+    border: 0.5vh solid white;
+    color: rgba(63, 165, 255, 0.92);
+    font-size: 1vh;
+}
+
+#InfoUser h2,#InfoUser h1{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+}
+
+.Article,.Offer{
+    margin-top: 2vh;
+    background-color: rgba(240, 255, 255, 0.252);
+    padding: 3vh;
+    width: 30%;
+    display: flex;
+    border-radius: 3%;
+    align-items: start;
+    justify-content: space-between;
+    flex-direction: column;
+    overflow: hidden;
+    color: white;
+    font-size: 1.4vh;
+}
+
+.Article img, .Offer img{
+    margin: 1vh;
+    margin-left: 10vh;
+    width: 55%;
+    height: 55%;
+}
+
+
+.Article h2, .Offer h2{
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgba(230, 238, 255, 0.651);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2.4vh;
+    text-align: center;
+    padding: 1vh;
+}
+
+a{
+    font-size: 2vh;
+    text-decoration: none;
+    margin-left: 2vh;
+    padding: 1vh;
+    color: rgb(182, 212, 238);
+    background-color: rgba(230, 238, 255, 0.651);
+    border-radius: 3%/40%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+#Return{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    margin: 2vh;
+}
+
+#LogOut{
+    margin: 3vh 0 3vh 0;
+    width: 19vh;
+    height: 3vh;
+    background-color: rgba(63, 165, 255, 0.92);
+    border: none;
+    color: white;
+    border-radius: 20% 40% 20% 40%;
+}

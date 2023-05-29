@@ -1,0 +1,151 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-image: url("./Icons/Background.jpg");
+    background-size: cover;
+    margin: 0px;
+    padding: 0px;
+}
+
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly   ;
+    background-color: aliceblue;
+    width: 100%;
+    height: 7vh;
+    border-radius: 1%/50%;
+    margin-bottom: 7vw;
+}
+
+.Header a{
+    text-decoration: none;
+    text-shadow: 1px 1px 9px black;
+   color: rgb(132, 180, 222);
+   font-family: 'Josefin Sans', sans-serif;    
+   border-radius: 10%;
+   border: 3px solid rgba(78, 124, 164, 0.931);
+   padding: 3px;
+}
+
+#SearchDiv{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#SearchInput h3{
+    margin-right: -7vh;
+    color: rgba(63, 165, 255, 0.92);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2vh;
+}
+
+#SearchBar{
+    width: 30%;
+}
+
+#SearchInput{
+    margin-left: -8vh;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(220, 242, 255, 0.825);
+    border-radius: 3%/50%;
+    padding: 2vh;
+}
+
+#SearchButton{
+    background-color: rgba(63, 165, 255, 0.92);
+    border: none;
+    color: white;
+    border-radius: 20% 40% 20% 40%;
+}
+
+#SearchResults {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#SearchResults p1{
+    margin: 2vh;
+    color: rgb(0, 255, 179);
+    font-size: 5vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.Elements{
+    margin: 3vw;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 255, 255, 0.316);
+    border-radius: 4%;
+    width: 80%;
+    height: 10%;
+}
+
+.ElementsInfo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+    flex-direction: column;
+    overflow: hidden;;
+    width: 70%;
+    border: 3px ridge rgba(203, 252, 255, 0.844);
+    background-color: rgba(0, 255, 255, 0.316);
+    padding-left: 1vh;
+    padding-bottom: 1vh;
+}
+.ElementsInfo h1,.ElementsInfo h2,.ElementsInfo h3{
+    color: rgb(182, 212, 238);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.ElementsInfo h1{
+    color: rgb(204, 226, 246);
+    font-size: 3vw;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+.ElementsInfo h2{
+    font-size: 2vw;
+    padding-bottom: 2vh;
+}
+.ElementsInfo h3{
+    margin-top: -2vh;
+    padding-top: 1vh;
+    font-size: 1vw;
+    font-style: italic;
+}
+
+.Elements img{
+    margin: 3vw;
+    border: 3px ridge rgba(203, 252, 255, 0.844);
+}
+
+.Elements h1,.Elements h2{
+    overflow-wrap: break-word;
+    text-overflow: clip;
+}
+
+.ElementsInfo input{
+    background-color: rgb(88, 188, 255);
+    border: 3px ridge rgba(203, 252, 255, 0.844);
+    color: white;
+}
+
+
+.Header img{
+    width: 10vw;
+    height: 100%;
+    margin-left: -3vw;
+    border-radius: 30%;
+    border: 4px ridge rgb(91, 136, 235);
+}
